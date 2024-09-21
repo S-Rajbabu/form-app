@@ -1,0 +1,45 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Adjust width */
+    height: 24px; /* Adjust height */
+    margin-left: 18px; /* Adjust this value to move right */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 5px;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px; /* Adjust border radius for smaller toggle */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Adjust height */
+    width: 20px; /* Adjust width */
+    left: 2px; /* Adjust position */
+    bottom: 2px; /* Adjust position */
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px); /* Adjust for smaller toggle */
+}

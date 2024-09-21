@@ -1,0 +1,493 @@
+/* App Styles */
+.App {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.app-body {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Basic Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    height: 100vh;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #e5e5e5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5px; /* Adjust for navbar height */
+    left: 0;
+    z-index: 10;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Sidebar Headers and Buttons */
+.sidebar h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+}
+
+.tab-button.active {
+    background-color: #fff;
+    border-bottom: none;
+}
+
+
+
+/* Welcome Screen Edit Section */
+.welcome-edit-section {
+    padding: 20px;
+}
+
+.welcome-edit-section label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.welcome-edit-section input, .welcome-edit-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #e5e5e5;
+}
+
+/* Image Preview */
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.image-controls button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+}
+
+.image-controls button:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Placement options*/
+.image-controls {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+.label {
+    margin-right: 20px; /* Space between label and buttons */
+    margin-left: -10px; /* Adjust this value to move the label left */
+    font-weight: bold; /* Makes the label bold */
+}
+
+
+/* Steps and Buttons in Sidebar */
+.steps {
+    margin-top: 20px;
+}
+
+.steps h3 {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Step and Add Field Buttons */
+.step-button, .add-field-button {
+    display: block;
+    width: 100%; /* Full width to ensure consistency */
+    height: 50px; /* Fixed height for all buttons */
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left; /* Align text to the left */
+    position: relative;
+    box-sizing: border-box;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.step-button {
+    background-color: #f2f2f2;
+}
+
+.add-field-button {
+    background-color: #fff;
+    color: #000;
+    border-style: dashed;
+}
+
+/* Button Delete Icon */
+.step-container {
+    display: flex;
+    align-items: center;
+}
+
+.step-button {
+    flex-grow: 1;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 25px; /* Position delete button on the right */
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Save & Delete Buttons in Sidebar */
+.save-delete-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.save-button, .delete-button {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.save-button {
+    background-color: #000;
+    color: #fff;
+}
+
+/*save button for the welcome edit screen sidebar*/
+/* Save and Discard Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Save Button (Black) */
+button.save-button {
+    background-color: #000000; /* Black background */
+    color: white; /* White text */
+    transition: background-color 0.3s;
+}
+
+button.save-button:hover {
+    background-color: #333333; /* Slightly lighter on hover */
+}
+
+/* Discard Button (Red) */
+button.discard-button {
+    background-color: #ff0000; /* Red background */
+    color: white; /* White text */
+    transition: background-color 0.3s;
+}
+
+button.discard-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+
+/*disgard button for the welcome edit screen sidebar*/
+.discard-btn{
+    color: red; 
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+
+}
+
+
+.delete-button {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 0; /* Remove sidebar margin if not needed */
+    margin-top: 5px; /* Adjust this based on your navbar height */
+    /* margin-bottom: 105px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 330px; /* Remove padding to prevent overflow */
+    width: 100vw; /* Full viewport width */
+    height: calc(100vh - 60px); /* Full height minus navbar */
+    box-sizing: border-box; /* Ensure no extra space from padding */
+    background-color: #fff; /* Optional background */
+    overflow: hidden; /* Ensure no scrolling */
+}
+
+body, html {
+    margin: 10;
+    padding: 10;
+    height: 100%; /* Ensure body and html are 100% height */
+    box-sizing: border-box;
+}
+
+/* Form Content Styles */
+.form-content {
+    text-align: center; 
+    padding-left: 320px;
+    /* margin-left: 1250px; */
+    width: 100%; /* Full width of the main content */
+    max-width: 1200px; /* Optional: Restrict width for better readability */
+    margin: 0 auto; /* Center align */
+}
+
+.form-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-content p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.form-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #f2f2f2;
+}
+
+/* Add Field Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.field-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.field-options button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* Email content */
+.email-edit-section {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px; /* Spacing around the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.email-edit-section h3 {
+    color: #333; /* Dark grey color for heading */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.email-edit-section label {
+    display: block; /* Each label on a new line */
+    margin-bottom: 5px; /* Space below label */
+    font-weight: bold; /* Bold labels */
+}
+
+.email-edit-section input[type="text"],
+.email-edit-section textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 15px; /* Space below input */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 15px; /* Space below switch */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px; /* Rounded slider */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%; /* Rounded knob */
+}
+
+input:checked + .slider {
+    background-color: #2196F3; /* Blue background when checked */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move knob to the right when checked */
+}
+
+.email-edit-section button {
+    background-color: black; /* Black background for Save button */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline on text */
+    display: inline-block; /* Display as inline block element */
+    font-size: 16px; /* Text size */
+    margin-right: 10px; /* Space between buttons */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.email-edit-section button[onClick="handleEmailDiscard"] {
+    background-color: white; /* White background for Discard button */
+    color: red; /* Red text for Discard button */
+    border: 1px solid red; /* Red border for Discard button */
+}
+
+
+/*navigation bar */
+.navbar {
+    padding: 10px; /* Padding around the navbar */
+    width: 100%; /* Full width */
+}
+
+.navbar-menu {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display items in a row */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+.navbar-menu li {
+    color: #333; /* Dark grey text color */
+    padding: 15px 15px 15px 0px; /* Adjust padding to move content more to the left */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    font-size: 14px; /* Smaller font size */
+}
+
+.navbar-menu li:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color: #333; /* Dark grey text color on hover */
+}
+
+.navbar-menu .active {
+    background-color: #f0f0f0; /* Light grey background for active item */
+    color: #333; /* Dark grey text color for active item */
+}
+
+
