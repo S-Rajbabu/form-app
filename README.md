@@ -1,7 +1,7 @@
 ### Instructions
 First clone this repository.
 
- - git clone https://github.com/S-Rajbabu/todo-app.git
+ - git clone https://github.com/S-Rajbabu/form-app.git
 
 Before you begin, ensure you have installed the  [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/).
 
